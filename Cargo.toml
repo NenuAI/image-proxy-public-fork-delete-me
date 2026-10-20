@@ -23,7 +23,7 @@ webp = "0.3"
 hotpath = "0.21"
 object_store = { version = "0.14.2", features = ["aws"] }
 opentelemetry = { version = "0.31", optional = true, default-features = false, features = ["metrics"] }
-opentelemetry_sdk = { version = "0.31", optional = true, default-features = false, features = ["metrics"] }
+opentelemetry_sdk = { version = "0.32", optional = true, default-features = false, features = ["metrics"] }
 opentelemetry-otlp = { version = "0.31", optional = true, default-features = false, features = ["metrics", "http-proto", "reqwest-blocking-client", "reqwest-rustls"] }
 
 [features]
@@ -33,7 +33,7 @@ hotpath-alloc = ["hotpath/hotpath-alloc"]
 otel = ["dep:opentelemetry", "dep:opentelemetry_sdk", "dep:opentelemetry-otlp"]
 
 [dev-dependencies]
-opentelemetry_sdk = { version = "0.31", default-features = false, features = ["metrics", "testing"] }
+opentelemetry_sdk = { version = "0.32", default-features = false, features = ["metrics", "testing"] }
 tempfile = "3"
 
 [profile.release.package."*"]
